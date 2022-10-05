@@ -1,0 +1,30 @@
+@import '../../App.scss';
+
+.box{
+  height: 10rem;
+  width: 10rem;
+  border: $space-1 solid $secondary-color;
+  background-color: $primary-color;
+
+  .box1{
+    color: $success-color;
+    span{
+      color: $danger-color;
+    }
+    .span-extended{
+      @extend span;
+      color: orange;
+    }
+  }
+
+  .box2{
+    @extend .box1;
+    span{
+      color: black;
+    }
+  }
+}
+
+// .box .box1 span{
+//   color: $secondary-color;
+// }
