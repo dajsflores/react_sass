@@ -8,6 +8,7 @@ import useFetch from './hooks/CustomFetch/useFetch';
 import { useThemeContext, useThemeToggleContext } from './providers/ThemeProvider';
 import { setThemeLight } from './app/themeProviderRedux';
 import { setCharacters } from './app/characterProviderRedux';
+import { Box } from './components/Box';
 
 const App = () => {
   const dataPersonajes = useFetch('https://rickandmortyapi.com/api/character');
@@ -16,7 +17,7 @@ const App = () => {
   const dataRedux = useSelector((state) => state);
   const dispatch = useDispatch();
 
-  console.log(dataRedux);
+  // console.log(dataRedux);
   const theme = useThemeContext();
   const setTheme = useThemeToggleContext();
 
@@ -30,7 +31,7 @@ const App = () => {
   };
 
   const getCharacterById = () => {
-    console.log(dataPersonajeById);
+    // console.log(dataPersonajeById);
   };
 
   useEffect(() => {
@@ -39,8 +40,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <Header theme={theme} setTheme={setTheme} />
-      { dataPersonajes?.loading && <p>Loading...</p> }
+      <Box />
+      {/* <Header theme={theme} setTheme={setTheme} />
+      { dataPersonajes?.loading && <p>Loading...</p> } */}
       {/* { dataPersonajes?.data?.results.map(character => (
         <>
           <Card
@@ -54,13 +56,13 @@ const App = () => {
           }
         </>
       ))} */}
-      <button
+      {/* <button
         onClick={() => dispatch(setCharacters(dataPersonajes))}
       >
         Cambiar el Characters
       </button>
       <button onClick={() => dispatch(setThemeLight())}>Cambiar tema</button>
-      <Counter />
+      <Counter /> */}
     </div>
   );
 };
