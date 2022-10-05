@@ -1,0 +1,12 @@
+@import '../../styles/spaces.module.scss';
+@import '../../styles/mixins.module.scss';
+
+.containerBox{
+  @include d-flex(flex, center);
+
+  .box{
+    // @include box-size;
+    @include box-size($space-10);
+    background-color: aquamarine;
+  }
+}

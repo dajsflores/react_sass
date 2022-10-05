@@ -1,0 +1,13 @@
+@mixin d-flex($display, $justify) {
+  display: $display;
+  justify-content: $justify;
+}
+
+// @mixin box-size {
+//   height: $space-10;
+//   width: $space-10;
+// }
+@mixin box-size($size) {
+  height: $size;
+  width: $size;
+}

@@ -9,6 +9,8 @@ import { useThemeContext, useThemeToggleContext } from './providers/ThemeProvide
 import { setThemeLight } from './app/themeProviderRedux';
 import { setCharacters } from './app/characterProviderRedux';
 import { Box } from './components/Box';
+import { Test } from './components/Test';
+import BoxPlus from './components/BoxPlus/BoxPlus';
 
 const App = () => {
   const dataPersonajes = useFetch('https://rickandmortyapi.com/api/character');
@@ -41,6 +43,10 @@ const App = () => {
   return (
     <div className="App">
       <Box />
+      <hr />
+      <Test />
+      <hr />
+      <BoxPlus />
       {/* <Header theme={theme} setTheme={setTheme} />
       { dataPersonajes?.loading && <p>Loading...</p> } */}
       {/* { dataPersonajes?.data?.results.map(character => (

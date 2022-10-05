@@ -1,0 +1,39 @@
+// Margins
+$space-1: 1rem;
+$space-2: 2rem;
+$space-3: 3rem;
+$space-4: 4rem;
+$space-5: 5rem;
+$space-10: 10rem;
+
+.m-1{
+  margin: $space-1;
+}
+.m-2{
+  margin: $space-2;
+}
+.m-3{
+  margin: $space-3;
+}
+.m-4{
+  margin: $space-4;
+}
+.m-5{
+  margin: $space-5;
+}
+
+.p-1{
+  padding: $space-1;
+}
+.p-2{
+  padding: $space-2;
+}
+.p-3{
+  padding: $space-3;
+}
+.p-4{
+  padding: $space-4;
+}
+.p-5{
+  padding: $space-5;
+}
